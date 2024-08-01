@@ -1,9 +1,10 @@
 import React from "react";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Layout, Menu, theme, Breadcrumb } from "antd";
 import { useNavigate } from "react-router-dom";
+
 const { Header, Content, Footer } = Layout;
 
-const App = () => {
+const Home = () => {
   const navigate = useNavigate();
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -49,8 +50,7 @@ const App = () => {
           }}
         >
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
+          <Breadcrumb.Item>Welcome</Breadcrumb.Item>
         </Breadcrumb>
         <div
           style={{
@@ -60,7 +60,8 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          Content
+          <h1>Welcome to the Home Page</h1>
+          <p>This is the home page content. You can add more information here.</p>
         </div>
       </Content>
       <Footer
@@ -73,4 +74,5 @@ const App = () => {
     </Layout>
   );
 };
-export default App;
+
+export default Home;
